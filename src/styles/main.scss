@@ -4,3 +4,115 @@
 @import "general/fonts";
 @import "general/base";
 @import "../blocks/blocks";
+@import url('https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900&display=swap');
+
+$light-color : #ffffff;
+$dark-color : #061e37;
+body{
+  margin: 0 auto;
+  font-family: 'Raleway', sans-serif;
+  font-size: 15px;
+  line-height: 24px;
+  max-width: 1600px;
+  color: $light-color;
+}
+
+.clear{
+  clear: both;
+}
+.page{
+  width: 100%;
+}
+.page-main{
+  margin-top: 0;
+  width: 100%;
+  height: 750px;
+  background-image: linear-gradient(to right, rgba(24, 228, 194, .85) 0%, rgba(13,180, 203, .85) 100%), url("../img/bg-main.png");
+  background-repeat: no-repeat;
+}
+.wrap{
+  margin-left: 5%;
+  margin-right: 5%
+}
+
+.logo{
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  flex-basis: 15%;
+  width: 15%;
+  color: $light-color;
+  line-height: 1;
+  &__img{
+
+  }
+  &__text{
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    span{
+      margin: 0;
+      padding: 0;
+      display: block;
+      text-transform: uppercase;
+      font-weight: 800;
+    }
+  }
+}
+.header{
+  padding-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &__list{
+    margin: 0;
+    padding: 0;
+    flex-basis: 75%;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+  }
+  &__item:not(:last-child){
+      margin-right: 50px;
+  }
+  &__link{
+    text-decoration: none;
+    color: $light-color;
+    text-transform: capitalize;
+    display: block;
+    box-sizing: border-box;
+    &:hover{
+      color: $dark-color;
+    }
+  }
+  &__btn{
+  }
+}
+.btn {
+  color: #000;
+  flex-shrink: 0;
+  height: 40px;
+  padding: 10px 30px;
+  line-height: 20px;
+  border: 0;
+}
+.btn-dark {
+    background-color: $dark-color;
+    color: $light-color;
+}
+.btn-sign-up {
+  font-size: 12px;
+  text-transform: lowercase;
+  color: $light-color;
+  background-color: transparent;
+  border: 1px solid $light-color;
+  border-radius: 2px;
+  flex-shrink: 0;
+  height: 40px;
+  padding:  10px 20px;
+  font-weight: 400;
+}
+.btn-text-uppercase{
+  text-transform: uppercase;
+}
