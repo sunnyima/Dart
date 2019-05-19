@@ -96,6 +96,7 @@ body{
   padding: 10px 30px;
   line-height: 20px;
   border: 0;
+  border-radius: 4px;
 }
 .btn-dark {
     background-color: $dark-color;
@@ -115,4 +116,71 @@ body{
 }
 .btn-text-uppercase{
   text-transform: uppercase;
+}
+
+.block-main{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 160px;
+  &-content{
+    flex-basis: 40%;
+    width: 40%;
+    &__title{
+      font-weight: 800;
+      font-size: 55px;
+      text-transform: uppercase;
+      line-height: 1;
+    }
+    &__text{
+      font-weight: 400;
+      font-size: 18px;
+    }
+    &__btn{
+
+    }
+
+  }
+  &-video{
+    flex-basis: 40%;
+    width: 40%;
+
+  }
+}
+.btn-player{
+  height: 50px;
+  width: 50px;
+  padding:  10px 10px;
+  i{
+    color: $light-color;
+  }
+}
+#player {
+  border: 1px solid black;
+  padding: 0;
+  margin: 0;
+  width: 634px;
+  height: 354px;
+  background-color: black;
+  margin: auto;
+  display: none;
+}
+#fake-player {
+  clear: both;
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 0;
+  margin: 0;
+  width: 634px;
+  height: 330px;
+  background-color: black;
+  background-image: url("../img/video.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color: $dark-color;
+  box-shadow:0 0 0 250px rgba(255, 255, 255, 0.9) inset;
 }
