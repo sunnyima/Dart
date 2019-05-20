@@ -92,9 +92,8 @@ body{
 .btn {
   color: #000;
   flex-shrink: 0;
-  height: 40px;
-  padding: 10px 30px;
-  line-height: 20px;
+  padding: 20px 20px;
+  line-height: 1;
   border: 0;
   border-radius: 4px;
 }
@@ -110,8 +109,8 @@ body{
   border: 1px solid $light-color;
   border-radius: 2px;
   flex-shrink: 0;
-  height: 40px;
-  padding:  10px 20px;
+
+  padding:  5px 18px;
   font-weight: 400;
 }
 .btn-text-uppercase{
@@ -121,7 +120,6 @@ body{
 .block-main{
   display: flex;
   justify-content: space-between;
-  align-items: center;
   margin-top: 160px;
   &-content{
     flex-basis: 40%;
@@ -130,16 +128,20 @@ body{
       font-weight: 800;
       font-size: 55px;
       text-transform: uppercase;
-      line-height: 1;
+      line-height: 1.1;
+      letter-spacing: 1.4px;
+      margin: 0;
     }
     &__text{
       font-weight: 400;
       font-size: 18px;
+      line-height: 2;
+      margin-top: 5px;
     }
     &__btn{
-
+        margin-right: 35px;
+        width: 150px;
     }
-
   }
   &-video{
     flex-basis: 40%;
@@ -147,20 +149,16 @@ body{
 
   }
 }
-.btn-player{
-  height: 50px;
-  width: 50px;
-  padding:  10px 10px;
-  i{
-    color: $light-color;
-  }
+.block-main-content-actions{
+  margin-top: 30px;
 }
+
 #player {
   border: 1px solid black;
   padding: 0;
   margin: 0;
-  width: 634px;
-  height: 354px;
+  width: 598px;
+  height: 319px;
   background-color: black;
   margin: auto;
   display: none;
@@ -171,8 +169,8 @@ body{
   border-radius: 4px;
   padding: 0;
   margin: 0;
-  width: 634px;
-  height: 330px;
+  width: 598px;
+  height: 319px;
   background-color: black;
   background-image: url("../img/video.png");
   background-size: cover;
@@ -183,4 +181,21 @@ body{
   align-items: center;
   color: $dark-color;
   box-shadow:0 0 0 250px rgba(255, 255, 255, 0.9) inset;
+}
+.player__btn{
+  height: 60px;
+  width: 60px;
+  padding:  10px 10px;
+  font-size: 10px;
+  margin-top: 15px;
+  i{
+    color: $light-color;
+  }
+}
+.player__text{
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1;
+  margin-top: 20px;
 }
