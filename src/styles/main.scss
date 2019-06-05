@@ -45,7 +45,19 @@ body{
 }
 .wrap{
   margin-left: 5%;
-  margin-right: 5%
+  margin-right: 5%;
+
+}
+.wrap-center{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wrap-25{
+  margin-left: 25%;
+  margin-right: 25%
 }
 
 .logo{
@@ -229,6 +241,7 @@ body{
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  width: 50%;
   &__title{
     color: $dark-color;
     font-size: 45px;
@@ -236,11 +249,16 @@ body{
   &__subtitle{
     color: $grey-color;
     font-size: 25px;
+
   }
   &__text{
     color: $grey-color;
     font-size: 15px;
+    text-align: center;
   }
+}
+.block-page-title--big{
+  width: 100%;
 }
 
 .block-works{
@@ -269,23 +287,30 @@ body{
 
 .block-info{
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
   font-weight: 800;
   width: 25%;
+  height: 150px;
+  &__img{
+    display: block;
+    //flex-basis: 40%;
+  }
+  &__title{
+    // flex-basis: 60%;
+    margin: 0;
+    padding: 0;
+    font-weight: 800;
+    span{
+      display: block;
+    }
+  }
 }
 .block-info--light-blue{
   background-color: $light-blue-color;
-  background-image: url("../img/business.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
 }
 .block-info--blue{
   background-color: $blue-color;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
 }
 .block-info--violet{
   background-color: $violet-color;
@@ -307,3 +332,64 @@ body{
     border: none;
   }
 }
+.block-services{
+  width: 100%;
+}
+.block-service{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  &-header{
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.13);
+    //box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.1);
+    margin-bottom: 5%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    width: 100%;
+    &-title {
+      margin-left: 5%;
+      margin-right: 5%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      &__img {
+        width: 25px;
+        height: 25px;
+        object-fit: cover;
+      }
+      &__text {
+        font-weight: 700;
+        color: $dark-color;
+        font-size: 15px;
+        text-transform: uppercase;
+        margin: 0;
+        padding: 0;
+        flex: 1;
+      }
+      &__arrow{
+        width: 11px;
+        height: 6px;
+        justify-self: flex-end;
+      }
+    }
+  }
+  &-content{
+    margin-left: 5%;
+    margin-right: 5%;
+    display: flex;
+    justify-content: space-between;
+    &__img{
+      margin-right: 5%;
+    }
+    &__text{
+      color: $dark-color;
+      font-size: 15px;
+      flex: 1;
+    }
+  }
+}
+
